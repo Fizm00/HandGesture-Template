@@ -17,12 +17,11 @@ export class TextShape {
         canvas.width = width;
         canvas.height = height;
 
-        // Draw text
         ctx.fillStyle = '#000000';
         ctx.fillRect(0, 0, width, height);
 
         ctx.fillStyle = '#FFFFFF';
-        ctx.font = 'bold 60px Arial'; // Simplified font choice for reliability
+        ctx.font = 'bold 60px Arial';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText(text, width / 2, height / 2);
@@ -31,11 +30,10 @@ export class TextShape {
         const data = imageData.data;
         const validPixels: { x: number, y: number }[] = [];
 
-        // Scan for white pixels
         for (let y = 0; y < height; y++) {
             for (let x = 0; x < width; x++) {
                 const i = (y * width + x) * 4;
-                if (data[i] > 128) { // Red channel > 128 (Whiteish)
+                if (data[i] > 128) {
                     validPixels.push({ x, y });
                 }
             }
@@ -43,15 +41,11 @@ export class TextShape {
 
         if (validPixels.length === 0) return [];
 
-        // Sample pixels to match particle count
         for (let i = 0; i < count; i++) {
             const pixel = validPixels[Math.floor(Math.random() * validPixels.length)];
-
-            // Map 2D pixel to 3D space
-            // Canvas coords: 0,0 is top-left. 3D: 0,0 is center.
-            const x = (pixel.x / width - 0.5) * 15; // Scale to scene width
-            const y = -(pixel.y / height - 0.5) * 8; // Scale and invert Y
-            const z = (Math.random() - 0.5) * 1.0; // Minimal depth
+            const x = (pixel.x / width - 0.5) * 15;
+            const y = -(pixel.y / height - 0.5) * 8;
+            const z = (Math.random() - 0.5) * 1.0;
 
             positions.push({ x, y, z });
         }

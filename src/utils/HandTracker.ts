@@ -43,12 +43,10 @@ export class HandTracker {
 
   private onResults(results: Results): void {
     if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
-      // Primary Hand
       const landmarks = results.multiHandLandmarks[0];
       const gesture = this.detectGesture(landmarks);
       const handCenter = this.getHandCenter(landmarks);
 
-      // Secondary Hand (if any)
       let secondHandData = undefined;
       if (results.multiHandLandmarks.length > 1) {
         const landmarks2 = results.multiHandLandmarks[1];
@@ -102,7 +100,7 @@ export class HandTracker {
       return 'PINCH';
     }
 
-    if (closedFingers >= 2) { // Allow slightly loose fist
+    if (closedFingers >= 2) {
       if (indexDistToPalm > 0.15) {
         return 'POINT';
       }

@@ -8,7 +8,6 @@ export class VoiceControl {
 
     constructor() {
         if ('webkitSpeechRecognition' in window) {
-            // @ts-ignore
             this.recognition = new window.webkitSpeechRecognition();
             this.recognition.continuous = true;
             this.recognition.interimResults = false;
@@ -32,7 +31,6 @@ export class VoiceControl {
                     try {
                         this.recognition.start();
                     } catch {
-                        // ignore
                     }
                 }
             };
@@ -51,7 +49,6 @@ export class VoiceControl {
         try {
             this.recognition.start();
         } catch {
-            // ignore
         }
     }
 
