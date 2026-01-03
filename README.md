@@ -1,49 +1,47 @@
-# 🌌 HandGesture
+# HandGesture Template
 
 > A Next-Gen Hand Tracking & Particle Simulation Experiment.
 > Built with React, Three.js, MediaPipe, and Web Audio API.
 
 ![Hand Gesture Demo](https://via.placeholder.com/800x450?text=HandGesture+Demo)
 
-## 🚀 Overview
+## Overview
 
 **HandGesture** is an interactive web application that transforms your hand movements into stunning 3D particle visuals. It features a futuristic **Cyber-Interface** with holographic HUDs, voice commands, and physics-based interactions.
 
-Step into a world where code meets magic.
+## Key Features
 
-## ✨ Key Features
-
-### 1. 🖐️ Advanced Hand Tracking
+### 1. Advanced Hand Tracking
 - **Right Hand**: Controls the shape and behavior of the particle system.
 - **Left Hand**: Controls **TIME** itself (God Mode).
-  - ✊ **Closed**: Time Freeze (Particles stop).
-  - 🤏 **Pinch**: Slow Motion (Matrix style).
-  - 🖐️ **Open**: Normal Speed.
+  - **Closed**: Time Freeze (Particles stop).
+  - **Pinch**: Slow Motion (Matrix style).
+  - **Open**: Normal Speed.
 
-### 2. 💠 3D Particle Shapes
+### 2. 3D Particle Shapes
 Switch between different volumetric modes:
-- ❤️ **HEART**: Volumetric, pulsing heart.
-- 🌌 **GALAXY**: Rotating spiral galaxy with a dense core.
-- ☀️ **SOLAR SYSTEM**: Atomic-style planetary orbits.
-- 🧬 **DNA**: Double helix structure.
-- 🔤 **TEXT**: Type anything to turn particles into 3D text.
+- **HEART**: Volumetric, pulsing heart.
+- **GALAXY**: Rotating spiral galaxy with a dense core.
+- **SOLAR SYSTEM**: Atomic-style planetary orbits.
+- **DNA**: Double helix structure.
+- **TEXT**: Type anything to turn particles into 3D text.
 
-### 3. 🎙️ JARVIS Voice Control
+### 3. JARVIS Voice Control
 Control the system with your voice (Click "Voice" button to activate):
 - **"Galaxy"**, **"Heart"**, **"Solar"**, **"DNA"** -> Switch modes.
 - **"Red"**, **"Blue"**, **"Green"**, **"Gold"** -> Change colors instantly.
 
-### 4. 💥 Kinetic Physics
+### 4. Kinetic Physics
 - **Sharkwave ("Force Push")**: Punch forward quickly to trigger a massive shockwave explosion.
 - **Space Chaos**: Open your right hand to create turbulence (Starfield mode).
 - **Finger Painting**: Use your index finger (`POINT`) to draw trails in 3D space.
 
-### 5. 👓 Cyber-Interface
+### 5. Cyber-Interface
 - **Holographic HUD**: Sci-Fi status cards tracking your hand states.
 - **Cyber-Cam**: Your video feed is styled as a holographic background.
 - **3D Parallax**: The camera reacts to your mouse/head movement for depth.
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Framework**: React + Vite
 - **Language**: TypeScript
 - **3D Engine**: Three.js
@@ -51,7 +49,7 @@ Control the system with your voice (Click "Voice" button to activate):
 - **Styling**: Tailwind CSS
 - **Audio**: Web Audio API (Audio Reactive)
 
-## 📦 Installation
+## Installation
 
 ```bash
 # 1. Clone the repository
@@ -67,7 +65,7 @@ npm install
 npm run dev
 ```
 
-## 🎮 Controls Guide
+## Controls Guide
 
 | Gesture | Hand | Action |
 | :--- | :--- | :--- |
@@ -78,7 +76,7 @@ npm run dev
 | **Closed Fist** | Left | **Time Freeze** ⏳ |
 | **Pinch** | Left | **Slow Motion** 🐌 |
 
-## 🎤 Voice Commands Checklist
+## Voice Commands Checklist
 - "Switch to **Galaxy**"
 - "Show me **Heart**"
 - "Make it **Red**"
@@ -86,5 +84,3 @@ npm run dev
 - "System **Solar**"
 
 ---
-
-*Created by Antigravity AI & User.*
